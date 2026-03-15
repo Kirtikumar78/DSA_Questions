@@ -1,5 +1,8 @@
 package Numbers;
 
+
+import java.util.Scanner;
+
 public class PalindromeNumber {
     //121
     public static boolean checkPalindrome(int num){
@@ -14,10 +17,41 @@ public class PalindromeNumber {
             return true;
         else return false;
     }
+    public static boolean check(int num){
+        String str=String.valueOf(num);
+        int start=0;
+        int end=str.length()-1;
+        boolean isPalindrome=true;
+
+        while(start<end){
+            if(str.charAt(start)==str.charAt(end)){
+                start++;
+                end--;
+
+            }
+            else{
+                isPalindrome=false;
+                break;
+
+            }
+
+        }
+        return isPalindrome;
+    }
+
     public static void main(String[] args) {
-        int num=1233211;
-        boolean result=checkPalindrome(num);
-        System.out.println(result);
+        Scanner sc =new Scanner(System.in);
+        int num=sc.nextInt();
+        boolean result=check(num);
+        if(result){
+            System.out.print("Palindrome");
+        }
+        else{
+            System.out.print("Not Palindrome");
+        }
+//        boolean result=checkPalindrome(num);
+//        System.out.println(result);
+
 
     }
 }
