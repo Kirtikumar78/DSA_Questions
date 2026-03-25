@@ -23,18 +23,23 @@ public class PalindromeNumber {
         int end=str.length()-1;
         boolean isPalindrome=true;
 
-        while(start<end){
-            if(str.charAt(start)==str.charAt(end)){
-                start++;
-                end--;
+//        while(start<end){
+//            if(str.charAt(start)==str.charAt(end)){
+//                start++;
+//                end--;
+//
+//            }
+//            else{
+//                isPalindrome=false;
+//                break;
+//
+//            }
+//
+//        }
 
-            }
-            else{
-                isPalindrome=false;
-                break;
-
-            }
-
+        while(num>0){
+            int sub=num%10;
+            int divide=num/10;
         }
         return isPalindrome;
     }
