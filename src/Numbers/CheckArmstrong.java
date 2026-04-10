@@ -8,15 +8,20 @@ public class CheckArmstrong {
         int num=sc.nextInt();
         int sum=0;
         int original=num;
+        int digits=String.valueOf(num).length();
         while(num>0){
-            sum=sum+(num%10)*(num%10)*(num%10);
+            int digit=num%10;
+            sum=(int)(sum+Math.pow(digit,digits));
             num=num/10;
+
         }
-        if(sum==original){
-            System.out.println("Armstrong");
-        }else{
-            System.out.println("Not Armstrong");
+
+        if (sum == original) {
+            System.out.println("Armstrong Number");
+        } else {
+            System.out.println("Not Armstrong Number");
         }
+
 
     }
 }
