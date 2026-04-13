@@ -15,6 +15,8 @@ public class FrequencyArray {
                 hm.put(arr[i],1);
             }
         }
-        System.out.println(hm);
+            for(Integer key: hm.keySet()){
+                System.out.println(key + " -> " + hm.get(key));
+            }
     }
 }
